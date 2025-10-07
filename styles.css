@@ -49,34 +49,82 @@ body {
   z-index: 9999;
   background-color: var(--secondary-color);
   width: 100%;
-  text-align: center;
   padding: 20px 40px;
+  text-align: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-html {
-  scroll-padding-top: 90px; 
+
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
 }
 
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--header-overlay);
+}
 
-.main-nav ul {
+/* Desktop menu */
+.nav-links {
   display: flex;
   justify-content: center;
   gap: 15px;
   list-style: none;
 }
 
-.main-nav a {
+.nav-links a {
   text-decoration: none;
   font-size: 20px;
   color: var(--header-overlay);
   transition: color 0.3s;
-  margin-right: 30px;
 }
 
-.main-nav a:hover {
+.nav-links a:hover {
   color: var(--primary-color);
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+  }
+
+  /* Show menu when checkbox checked */
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  /* Hide menu automatically when clicking a link */
+  .nav-links a:focus {
+    outline: none;
+  }
+
+  /* Use target trick to hide menu when navigating */
+  section:target ~ nav #menu-toggle:checked + .hamburger + .nav-links {
+    display: none;
+  }
+}
+
+html {
+  scroll-padding-top: 90px; 
+}
 /* =======================
    BIOGRAPHY SECTION
 ======================= */
@@ -172,20 +220,20 @@ section.icons h3 {
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  gap: 20px; /* spacing between videos */
   margin-top: 1rem;
+  padding: 0 20px; /* optional padding on sides */
 }
 
-.video-grid img {
+.video-grid iframe {
   width: 100%;
   height: 250px;
   border-radius: 8px;
-  object-fit: cover;
   transition: transform 0.2s ease-in-out;
 }
 
-.video-grid img:hover {
-  transform: scale(1.05);
+.video-grid iframe:hover {
+  transform: scale(1.03);
 }
 
 /* =======================
@@ -319,7 +367,7 @@ footer a:hover {
 }
 
 /* Mobiles */
-@media (max-width: 600px) {
+@media (max-width: 767px){
   section.icons {
     grid-template-columns: 1fr;
   }
@@ -339,5 +387,13 @@ footer a:hover {
 
   .video-grid {
     grid-template-columns: 1fr;
+  }
+   .footer-links {
+    flex-direction: column;
+    gap: 10px; /* vertical spacing for stacked links */
+  }
+
+  .footer-links a {
+    font-size: 16px;
   }
 }

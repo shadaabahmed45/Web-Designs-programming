@@ -16,14 +16,27 @@
 </header>
       <!-- NAVIGATION -->
       <nav class="main-nav">
-        <ul>
-          <li><a href="#bio"><b>Biography</b></a></li>
-          <li><a href="#career"><b>Career</b></a></li>
-          <li><a href="#best-moments"><b>Best Moments</b></a></li>
-          <li><a href="#gallery"><b>Gallery</b></a></li>
-          <li><a href="#fb"><b>Feedback</b></a></li>
-        </ul>
-      </nav>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="hamburger">&#9776;</label>
+  <ul class="nav-links">
+    <li><a href="#bio"><b>Biography</b></a></li>
+    <li><a href="#career"><b>Career</b></a></li>
+    <li><a href="#best-moments"><b>Best Moments</b></a></li>
+    <li><a href="#gallery"><b>Gallery</b></a></li>
+    <li><a href="#fb"><b>Feedback</b></a></li>
+  </ul>
+</nav>
+<script>
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const menuToggle = document.getElementById('menu-toggle');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.checked = false; // uncheck the menu
+    });
+  });
+</script>
+
     
 
     <!-- BIOGRAPHY -->
@@ -85,27 +98,46 @@
     </section></section>
 
     <!-- MEDIA -->
-    <main>
-      <section id="best-moments">
-  <h1><b>Best Moments</b></h1>
-  <div class="video-grid">
-    <a href="https://youtu.be/cD6yub2h4Pg" target="_blank">
-      <img src="IMAGES/vid1.png" alt="Best Moment 1">
-    </a>
+<main>
+  <section id="best-moments">
+    <h1><b>Best Moments</b></h1>
+    <div class="video-grid">
+      <iframe width="320" height="180"
+                 src="https://www.youtube.com/embed/GAxCXiHGAHA"
 
-    <a href="https://www.youtube.com/watch?v=lQBFRbSlqvg" target="_blank">
-      <img src="/IMAGES/vid2.png" alt="Best Moment 2">
-    </a>
+        title="Rohit Sharma 131 Runs vs Afghanistan"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
 
-    <a href="https://youtube.com/shorts/S2qsXbnXhVs?si=Wjy2INX1szNqPPJC" target="_blank">
-      <img src="./IMAGES/vid3.png" alt="Best Moment 3">
-    </a>
+      <iframe width="320" height="180"
+        src="https://www.youtube.com/embed/lQBFRbSlqvg"
+        title="Best Moment 2"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
 
-    <a href="https://www.youtube.com/shorts/a540_i8l_xU?feature=share" target="_blank">
-      <img src="/IMAGES/vid4.png" alt="Best Moment 4">
-    </a>
-  </div>
-</section>
+      <iframe width="320" height="180"
+        src="https://www.youtube.com/embed/S2qsXbnXhVs"
+        title="Best Moment 3"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+
+      <iframe width="320" height="180"
+        src="https://www.youtube.com/embed/a540_i8l_xU"
+        title="Best Moment 4"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
+</main>
+
 
 
       <!-- GALLERY -->
@@ -144,4 +176,4 @@
       <a href="#">Shadaab Ahmed</a>
     </footer>
   </body>
-</html>
+</html> 
