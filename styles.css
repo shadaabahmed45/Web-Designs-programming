@@ -121,6 +121,74 @@ body {
 html {
   scroll-padding-top: 90px; 
 }
+
+
+
+
+/* Scroller container */
+#page2 {
+  background-color: var(--secondary-color); /* your background color */
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+/* Hide scrollbar */
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+/* Scroller flex container */
+#scroller {
+    display: flex;
+    width: max-content; /* allow inline-block scrolling */
+}
+
+/* Scroller items */
+.scroller1 {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scroll 50s linear infinite;
+}
+
+/* Text styling */
+.scroller1 h4 {
+    font-size: 60px; /* desktop */
+    font-weight: 900;
+    font-family: 'gilroy', sans-serif;
+    margin-right: 40px;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--primary-color); /* outline using your primary color */
+    transition: all 0.5s linear;
+}
+
+.scroller1 h4:hover {
+    color: var(--primary-color); /* fill on hover */
+}
+
+/* Scroll animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* move half-width for infinite loop */
+}
+
+/* ===== Responsive ===== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .scroller1 h4 {
+        font-size: 40px;
+        margin-right: 25px;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+    .scroller1 h4 {
+        font-size: 30px;
+        margin-right: 15px;
+    }
+}
+
 /* =======================
    BIOGRAPHY SECTION
 ======================= */
@@ -159,6 +227,7 @@ section#bio {
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   object-fit: cover;
   transition: transform 0.3s;
+  max-height: 650px;
 }
 
 .bio-image img:hover {
@@ -264,6 +333,130 @@ section.icons h3 {
   transform: scale(1.05);
   box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
+/* =======================
+   update
+======================= */
+#page4 {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* heading on top, content below */
+    align-items: center;    /* center horizontally */
+    justify-content: center;
+    gap: 50px;
+    padding: 50px 20px;
+    background-color: var(--secondary-color);
+}
+
+#page4 > h1 {
+    font-size: 40px;
+    font-weight: 900;
+    font-family: gilroy, sans-serif;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    -webkit-text-stroke: 1px white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.elem-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: nowrap;       /* horizontal scroll on large desktops */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    justify-content: center; /* center the horizontal row */
+    width: 100%;
+}
+
+.elem {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    flex: 0 0 auto;          /* horizontal scrolling */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.elem h2 {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to left bottom, var(--primary-color), var(--accent-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #000;
+    font-weight: 800;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: all 0.5s ease;
+    text-align: center;
+    padding: 10px;
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    transform: scale(1.1);
+}
+
+.elem:hover h2 {
+    color: #fff;
+    background: transparent;
+}
+
+.elem:hover img {
+    transform: scale(1);
+}
+
+/* Tablet & Mobile: Vertical stack */
+@media (max-width: 992px) {
+    #page4 > h1 { font-size: 50px; }
+
+    .elem-container {
+        flex-direction: column !important; /* vertical */
+        flex-wrap: wrap !important;
+        gap: 20px;
+        overflow-x: hidden;
+        align-items: center;
+        width: 100%;
+    }
+
+    .elem {
+        width: 90%;
+        height: 250px;
+        flex: none;
+    }
+
+    .elem h2 {
+        font-size: 22px;
+        padding: 5px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #page4 > h1 { font-size: 36px; }
+
+    .elem {
+        height: 200px;
+    }
+
+    .elem h2 {
+        font-size: 20px;
+    }
+}
+
+
+
+
 
 /* =======================
    FOOTER
