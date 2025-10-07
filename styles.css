@@ -367,7 +367,7 @@ footer a:hover {
 }
 
 /* Mobiles */
-@media (max-width: 767px){
+@media (max-width: 600px){
   section.icons {
     grid-template-columns: 1fr;
   }
