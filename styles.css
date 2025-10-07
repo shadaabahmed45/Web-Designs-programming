@@ -1,0 +1,343 @@
+/* =======================
+   CSS VARIABLES
+======================= */
+:root {
+  --primary-color: rgb(134, 62, 15); /* dark brown */
+  --secondary-color: beige;
+  --accent-color: blanchedalmond;
+  --text-color: #333;
+  --header-overlay: rgba(0,0,0,0.5);
+  --font-family: 'Roboto', sans-serif;
+  --light: #f8f9fa;
+  --dark: #333;
+}
+
+/* =======================
+   GENERAL RESET
+======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  line-height: 1.6;
+}
+/* =======================
+   HITMAN BANNER
+======================= */
+.hitman-banner {
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 20px 10px;
+  font-size: 28px;
+  font-weight: bold;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* =======================
+   NAVIGATION
+======================= */
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: var(--secondary-color);
+  width: 100%;
+  text-align: center;
+  padding: 20px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+html {
+  scroll-padding-top: 90px; 
+}
+
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--header-overlay);
+  transition: color 0.3s;
+  margin-right: 30px;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color);
+}
+
+/* =======================
+   BIOGRAPHY SECTION
+======================= */
+section#bio {
+  background-color: var(--accent-color);
+  padding: 40px 20px;
+}
+
+.biography h1 {
+  text-align: center;
+  font-size: 40px;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.bio-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.bio-text {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.bio-text p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.bio-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.bio-image img:hover {
+  transform: scale(1.05);
+}
+
+/* =======================
+   CAREER SECTION
+======================= */
+.career {
+  background-color: var(--secondary-color);
+  padding: 40px 20px;
+}
+
+.career h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ICONS / ACHIEVEMENTS SECTION */
+section.icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+section.icons div {
+  background: rgb(238, 199, 142);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+section.icons div:hover {
+  transform: translateY(-5px);
+}
+
+section.icons h3 {
+  color: chocolate;
+  margin: 10px 0;
+}
+
+/* =======================
+   VIDEO GRID SECTION
+======================= */
+#best-moments h1 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.video-grid img {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.video-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* =======================
+   GALLERY SECTION
+======================= */
+#gallery {
+  padding: 40px 20px;
+  background-color: var(--secondary-color);
+  text-align: center;
+}
+
+#gallery h1 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+#gallery .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+#gallery .gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#gallery .gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+footer a:hover {
+  color: coral;
+}
+
+/* =======================
+   FEEDBACK SECTION
+======================= */
+.feedback-section {
+  background-color: var(--light);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.feedback-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.feedback-section p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.feedback-section input,
+.feedback-section textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px; /* spacing between fields */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+}
+
+.feedback-section textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.feedback-section button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-section button:hover {
+  background-color: var(--accent-color);
+  color: var(--dark);
+}
+
+
+/* =======================
+   MEDIA QUERIES
+======================= */
+/* Tablets */
+@media (max-width: 992px) {
+  section.icons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bio-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #gallery .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  section.icons {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-image img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  #gallery .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #gallery .gallery-grid img {
+    height: auto;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
