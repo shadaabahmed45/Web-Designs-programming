@@ -601,13 +601,32 @@ footer a:hover {
     margin: 0 auto;
   }
 
+/* Mobile */
+@media (max-width: 600px) {
   #gallery .gallery-grid {
-    grid-template-columns: 1fr;
+    display: flex;        /* horizontal scroll */
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
   }
 
   #gallery .gallery-grid img {
+    flex: 0 0 30%;        /* ~3 images per screen, adjust to 25% for 4 images */
     height: auto;
+    scroll-snap-align: start;
+    border-radius: 15px;  /* keep curved edges */
   }
+
+  /* Hide scrollbar */
+  #gallery .gallery-grid::-webkit-scrollbar {
+    display: none;
+  }
+  #gallery .gallery-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 
   .video-grid {
     grid-template-columns: 1fr;
