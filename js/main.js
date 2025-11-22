@@ -1,4 +1,13 @@
 console.log("Hello World!");
+const panels = document.querySelectorAll('.panel');
+
+panels.forEach(panel => {
+  panel.addEventListener('click', () => {
+    panels.forEach(p => p.classList.remove('active'));
+    panel.classList.add('active');
+  });
+});
+
 
 // Task 1: Full name
 function getFullName(firstName, lastName) {

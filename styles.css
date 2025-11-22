@@ -192,11 +192,13 @@ html {
 /* =======================
    BIOGRAPHY SECTION
 ======================= */
+/* BIO SECTION */
 section#bio {
   background-color: var(--accent-color);
   padding: 40px 20px;
 }
 
+/* HEADING */
 .biography h1 {
   text-align: center;
   font-size: 40px;
@@ -204,34 +206,54 @@ section#bio {
   margin-bottom: 30px;
 }
 
+/* BOX */
+.bio-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* CONTENT LAYOUT */
 .bio-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 30px;
   align-items: center;
 }
 
+/* TEXT */
 .bio-text {
+  flex: 1;
   font-size: 18px;
   line-height: 1.6;
-}
-
-.bio-text p {
-  margin-bottom: 15px;
   text-align: justify;
 }
 
+/* IMAGE */
 .bio-image img {
-  width: 100%;
+  width: 320px; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  object-fit: cover;
   transition: transform 0.3s;
-  max-height: 650px;
 }
 
 .bio-image img:hover {
   transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .bio-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bio-image img {
+    width: 100%;
+    max-width: 400px;
+  }
 }
 
 /* =======================
@@ -304,8 +326,9 @@ section.icons h3 {
 /* =======================
    GALLERY SECTION
 ======================= */
+/* GALLERY SECTION */
 #gallery {
-  padding: 40px 20px;
+  padding: 60px 20px;
   background-color: var(--secondary-color);
   text-align: center;
 }
@@ -315,24 +338,36 @@ section.icons h3 {
   margin-bottom: 30px;
 }
 
-#gallery .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+/* Expanding Panels */
+.panels {
+  display: flex;
+  height: 400px; /* adjust height as needed */
+  overflow: hidden;
 }
 
-#gallery .gallery-grid img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
+.panel {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50px;
+  margin: 5px;
+  cursor: pointer;
+  transition: flex 0.7s ease, transform 0.3s;
+  position: relative;
 }
 
-#gallery .gallery-grid img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+/* Active (expanded) panel */
+.panel.active {
+  flex: 3; /* expand size */
 }
+
+/* Optional hover effect */
+.panel:hover {
+  transform: scale(1.03);
+}
+
+
+
 /* =======================
    update
 ======================= */
