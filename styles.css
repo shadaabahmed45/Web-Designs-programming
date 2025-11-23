@@ -640,21 +640,15 @@ footer {
   .video-grid {
     grid-template-columns: 1fr;
   }
+
  .footer-links {
-  display: flex;
-  flex-direction: row;    /* horizontal */
-  justify-content: center; 
-  align-items: center;
-  gap: 30px;              /* spacing between links */
-  flex-wrap: nowrap;      /* FORCE one single line */
-  white-space: nowrap;    /* prevent line breaks */
-}
+    flex-direction: column;   /* STACK vertically on mobile */
+    gap: 12px;
+    white-space: normal;
+  }
 
-.footer-links a {
-  font-size: 16px;
-  text-decoration: none;
-  color: #333;
-}
-
-
+  .footer-links li a {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
 }
