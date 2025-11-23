@@ -488,11 +488,6 @@ section.icons h3 {
         font-size: 20px;
     }
 }
-
-
-
-
-
 /* =======================
    FOOTER
 ======================= */
@@ -502,17 +497,6 @@ footer {
   text-align: center;
   padding: 15px;
 }
-
-footer a {
-  color: white;
-  text-decoration: none;
-  padding: 0 15px;
-}
-
-footer a:hover {
-  color: coral;
-}
-
 /* =======================
    FEEDBACK SECTION
 ======================= */
@@ -570,6 +554,31 @@ footer a:hover {
   color: var(--dark);
 }
 
+
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  flex-direction: row;       /* horizontal */
+  justify-content: center;
+  align-items: center;
+  gap: 25px;                 /* space between links */
+  flex-wrap: nowrap;         /* keep in single line */
+  white-space: nowrap;       /* no line breaks */
+}
+
+.footer-links li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+
+.footer-links li a:hover {
+  color: coral;
+}
 
 /* =======================
    MEDIA QUERIES
@@ -631,12 +640,21 @@ footer a:hover {
   .video-grid {
     grid-template-columns: 1fr;
   }
-   .footer-links {
-    flex-direction: column;
-    gap: 10px; /* vertical spacing for stacked links */
-  }
+ .footer-links {
+  display: flex;
+  flex-direction: row;    /* horizontal */
+  justify-content: center; 
+  align-items: center;
+  gap: 30px;              /* spacing between links */
+  flex-wrap: nowrap;      /* FORCE one single line */
+  white-space: nowrap;    /* prevent line breaks */
+}
 
-  .footer-links a {
-    font-size: 16px;
-  }
+.footer-links a {
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+}
+
+
 }
