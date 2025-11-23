@@ -583,6 +583,7 @@ footer {
 /* =======================
    MEDIA QUERIES
 ======================= */
+
 /* Tablets */
 @media (max-width: 992px) {
   section.icons {
@@ -600,20 +601,22 @@ footer {
 }
 
 /* Mobiles */
-@media (max-width: 600px){
+@media (max-width: 600px) {
+
+  /* ICONS */
   section.icons {
     grid-template-columns: 1fr;
   }
 
+  /* BIO IMAGE */
   .bio-image img {
     max-width: 80%;
     margin: 0 auto;
   }
 
-/* Mobile */
-@media (max-width: 600px) {
+  /* GALLERY – HORIZONTAL SLIDER */
   #gallery .gallery-grid {
-    display: flex;        /* horizontal scroll */
+    display: flex;
     overflow-x: auto;
     gap: 10px;
     padding: 10px 0;
@@ -621,10 +624,10 @@ footer {
   }
 
   #gallery .gallery-grid img {
-    flex: 0 0 30%;        /* ~3 images per screen, adjust to 25% for 4 images */
+    flex: 0 0 30%;   /* shows ~3 images on mobile */
     height: auto;
     scroll-snap-align: start;
-    border-radius: 15px;  /* keep curved edges */
+    border-radius: 15px;
   }
 
   /* Hide scrollbar */
@@ -635,16 +638,18 @@ footer {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-}
 
+  /* VIDEOS */
   .video-grid {
     grid-template-columns: 1fr;
   }
 
- .footer-links {
-    flex-direction: column;   /* STACK vertically on mobile */
+  /* FOOTER — STACK VERTICALLY ON MOBILE */
+  .footer-links {
+    flex-direction: column !important; 
     gap: 12px;
-    white-space: normal;
+    white-space: normal !important;
+    flex-wrap: wrap !important;
   }
 
   .footer-links li a {
@@ -652,3 +657,4 @@ footer {
     padding: 8px 10px;
   }
 }
+
