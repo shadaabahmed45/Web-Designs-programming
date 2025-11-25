@@ -15,7 +15,7 @@
     <title>Rohit Sharma Biography</title>
   </head>
   <body>
-   
+    <div class="wrapper">
     <header>
       <!-- HITMAN HEADING AT TOP -->
       <section class="hitman-banner">
@@ -34,27 +34,10 @@
     <li><a href="#fb">Feedback</a></li>
   </ul>
 </nav>
-<script>
-  const navLinks = document.querySelectorAll('.nav-links a');
-  const menuToggle = document.getElementById('menu-toggle');
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      menuToggle.checked = false; // uncheck the menu
-    });
-  });
-</script>
-    </header>
+  </header>
     <main>
 <div id="page2">
   <div id="scroller">
-    <div class="scroller1">
-      <h4>Matches Played</h4>
-      <h4>Centuries</h4>
-      <h4>Half-Centuries</h4>
-      <h4>Highest ODI Score</h4>
-      <h4>IPL Titles</h4>
-    </div>
     <div class="scroller1">
       <h4>Matches Played</h4>
       <h4>Centuries</h4>
@@ -194,11 +177,7 @@
         </div>
     </div>
 </section>
-
-
-
     </main>
-
     <footer>
           <section id="fb" class="feedback-section">
       <h2>Feedback</h2>
@@ -217,9 +196,8 @@
     <li><a href="#">&copy; 2025 | Rohit Sharma Fan Page</a></li>
     <li><a href="#">Shadaab Ahmed</a></li>
   </ul>
-
     </footer>
     <script src="js/main.js"></script>
-
+    </div>
   </body>
 </html> 

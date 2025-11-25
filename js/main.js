@@ -1,4 +1,14 @@
 console.log("Hello World!");
+
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const menuToggle = document.getElementById('menu-toggle');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle.checked = false; // uncheck the menu
+    });
+  });
+
 const panels = document.querySelectorAll('.panel');
 
 panels.forEach(panel => {
