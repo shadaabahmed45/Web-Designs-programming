@@ -296,9 +296,7 @@ section.icons {
   gap: 20px;
   text-align: center;
 }
-section p{
-  font-size: 24px;
-}
+
 section.icons div {
   background: rgb(238, 199, 142);
   border-radius: 10px;
@@ -314,7 +312,7 @@ section.icons div:hover {
 section.icons h3 {
   color: chocolate;
   margin: 10px 0;
-  font-size: 28px;
+  font-size: 20px;
 }
 /* =======================
    UPDATES / NEWS SECTION
@@ -355,18 +353,18 @@ section.icons h3 {
 .update-card h3 {
   color: chocolate;
   margin-bottom: 15px;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .update-card p {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 1.5;
   margin-bottom: 10px;
 }
 
 .update-card .date {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--dark);
   margin-top: 5px;
 }
@@ -499,8 +497,8 @@ section.icons h3 {
 }
 
 .elem {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
     overflow: hidden;
     border-radius: 20px;
     position: relative;
