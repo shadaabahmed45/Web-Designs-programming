@@ -68,6 +68,7 @@ footer {
   font-weight: bold;
   border-bottom: 2px solid var(--primary-color);
 }
+
 /* =======================
    NAVIGATION
 ======================= */
@@ -243,14 +244,14 @@ section#bio {
 /* TEXT */
 .bio-text {
   flex: 1;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   text-align: justify;
 }
 
 /* IMAGE */
 .bio-image img {
-  width: 320px; 
+  width: 400px; 
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
   transition: transform 0.3s;
@@ -295,7 +296,9 @@ section.icons {
   gap: 20px;
   text-align: center;
 }
-
+section p{
+  font-size: 24px;
+}
 section.icons div {
   background: rgb(238, 199, 142);
   border-radius: 10px;
@@ -311,6 +314,74 @@ section.icons div:hover {
 section.icons h3 {
   color: chocolate;
   margin: 10px 0;
+  font-size: 28px;
+}
+/* =======================
+   UPDATES / NEWS SECTION
+======================= */
+#updates {
+  background-color: var(--accent-color);
+  padding: 40px 20px;
+}
+
+#updates h1 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+/* Container as grid */
+.updates-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+/* Individual update cards */
+.update-card {
+  background: #ffff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.update-card:hover {
+  transform: translateY(-5px);
+}
+
+.update-card h3 {
+  color: chocolate;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.update-card p {
+  font-size: 24px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.update-card .date {
+  display: block;
+  font-size: 18px;
+  color: var(--dark);
+  margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .updates-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .updates-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* =======================
@@ -428,8 +499,8 @@ section.icons h3 {
 }
 
 .elem {
-    height: 300px;
-    width: 300px;
+    height: 400px;
+    width: 400px;
     overflow: hidden;
     border-radius: 20px;
     position: relative;
