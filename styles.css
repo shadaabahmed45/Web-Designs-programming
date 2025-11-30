@@ -68,6 +68,61 @@ footer {
   font-weight: bold;
   border-bottom: 2px solid var(--primary-color);
 }
+/* ICON CONTAINER */
+.social-icons{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    align-items:center;
+}
+.media{
+    height: 50px;
+    width: 50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    color:white;
+    background-color: var(--primary-color);
+    border-radius:50%;
+    transition:.4s;
+    cursor:pointer;
+}
+.media:hover{
+    transform: translateY(-12px);
+}
+
+/* FACEBOOK */
+.facebook:hover{
+    color:#1877f2;
+    background:#fff;
+    box-shadow:#1877f2 0 0 20px 8px;
+}
+
+/* INSTAGRAM */
+.instagram:hover{
+    color:#fff;
+    background:radial-gradient(circle at 30% 30%, #feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    box-shadow:#d62976 0 0 20px 8px;
+}
+
+/* TIKTOK */
+.tiktok:hover{
+    background:linear-gradient(45deg,#ff0050,#050505,#00f2ea);
+    box-shadow:#ff0050 -4px 4px 15px,#00f2ea 4px -4px 15px;
+}
+.tiktok:hover i{
+    background-image:linear-gradient(45deg,#ff0050,#00f2ea);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+/* YOUTUBE */
+.youtube:hover{
+    color:#fe0808;
+    background:#fff;
+    box-shadow:#fe0808 0 0 18px 8px;
+}
 
 /* =======================
    NAVIGATION

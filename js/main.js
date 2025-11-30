@@ -42,3 +42,10 @@ function printRightTree(n) {
     }
 }
 printRightTree(5);
+// Import the data from content.js
+import { stats, biography, careerHighlights, updates, bestMoments, gallery, highlights } from '../data/content.js';
+
+// Test
+console.log(stats);
+console.log(biography);
+
