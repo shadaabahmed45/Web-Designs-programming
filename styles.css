@@ -112,9 +112,6 @@ footer {
     background: #fff;
     box-shadow: #1DA1F2 -4px 4px 15px, #0d8ae5 4px -4px 15px;
 }
-
-
-
 /* YOUTUBE */
 .youtube:hover{
     color:#fe0808;
@@ -315,7 +312,7 @@ section#bio {
 }
 
 /* RESPONSIVE */
-@media (max-width: 850px) {
+@media (max-width: 992px) {
   .bio-content {
     flex-direction: column;
     text-align: center;
