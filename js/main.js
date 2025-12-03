@@ -20,14 +20,11 @@ panels.forEach(panel => {
     panel.classList.add('active');
   });
 });
-
-
 // Task 1: Full name
 function getFullName(firstName, lastName) {
     return firstName + " " + lastName;
 }
 console.log(getFullName("Rohit", "Sharma"));
-
 // Task 2: Mean
 function findMean(numbers) {
     let sum = 0;
@@ -45,9 +42,9 @@ function printRightTree(n) {
     }
 }
 printRightTree(5);
+
 // Import the data from content.js
 import { stats, biography, careerHighlights, updates, bestMoments, gallery, highlights } from '../data/content.js';
-
 // Test
 console.log(stats);
 console.log(biography);
